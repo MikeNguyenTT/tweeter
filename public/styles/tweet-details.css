@@ -4,6 +4,8 @@ article.tweet {
   border: 4px solid black;
   margin-bottom: 50px;
   padding: 30px;
+  flex-wrap: wrap;
+  word-break:break-all
 }
 
 article.tweet .header {
