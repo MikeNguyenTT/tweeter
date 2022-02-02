@@ -14,7 +14,7 @@ const createTweetElement  = function(tweetData) {
       <div class="handle">${tweetData.user.handle}</div>
     </div>
     <div class="content">
-      <p>${tweetData.content.text}</p>
+      <p>${escapeScript(tweetData.content.text)}</p>
     </div>
     <footer>
       <div class="time">${timeago.format(tweetData.created_at)}</div>
@@ -48,7 +48,8 @@ const loadtweets = function() {
 const postNewTweetObSubmit = function() {
   $('#new-tweet').on('submit', (evt) => {
     evt.preventDefault();
-    const tweetText = $("#tweet-text").val();
+    const tweetText = escapeScript($("#tweet-text").val());
+
     if (tweetText === "" || tweetText === null) {
       alert("Please input your tweet");
       return;
@@ -65,6 +66,12 @@ const postNewTweetObSubmit = function() {
     });
   });
 }
+
+const escapeScript = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 $( document ).ready(function() {
   loadtweets();
