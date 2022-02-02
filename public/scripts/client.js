@@ -34,7 +34,7 @@ const renderTweets = function(tweetsArr) {
   
   for (const tweetData of tweetsArr) {
     const tweetHTML = createTweetElement(tweetData);
-    $('#tweets-container').append(tweetHTML);
+    $('#all-tweet').append(tweetHTML);
   }
 }
 
@@ -60,9 +60,8 @@ const postNewTweetObSubmit = function() {
     };
 
     const param = $('#new-tweet').serialize();
-    $.post('/tweets', param).then(() => {
-      // $('#tweets-container').prepend(createTweetElement(tweetData));
-      // loadtweets();
+    $.post('/tweets', param).then((responseTweet) => {
+      $('#all-tweet').prepend(createTweetElement(responseTweet));
     });
   });
 }
