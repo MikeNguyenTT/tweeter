@@ -1,6 +1,7 @@
 nav {
   height: 120px;
-  background-color: #4056A1;
+  background-image: url("../images/background.png");
+  background-color: rgb(97, 139, 49);
   width: 100%;
   color: #FFFFFF;
   padding: 1.5em;
@@ -23,6 +24,23 @@ nav {
   align-items: center;
 }
 
-.fa-angles-down {
+#double-down-icon {
   color: red;
+}
+
+#new {
+  background-color: transparent;
+  border:none;
+}
+
+.generic-nav:hover > #double-down-icon {
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: slide;
+}
+
+@keyframes slide {
+  from { margin-top: 0px; }
+  to { margin-top: 10px; }
 }

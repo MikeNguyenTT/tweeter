@@ -52,12 +52,12 @@ const postNewTweetOnSubmit = function() {
     const tweetText = escapeScript($("#tweet-text").val());
 
     if (tweetText === "" || tweetText === null) {
-      showErrorMessage("Please input your tweet");
+      showErrorMessage("Please input your tweet!");
       return;
     };
 
     if (tweetText.length > 140) {
-      showErrorMessage("Tweet length cannot be more than 140 characters");
+      showErrorMessage("Too long. Please respect our arbitrary limit of 140b chars!");
       return;
     };
 
@@ -66,6 +66,14 @@ const postNewTweetOnSubmit = function() {
       muteErrorMessage();
       $('#all-tweet').prepend(createTweetElement(responseTweet));
     });
+  });
+}
+
+const newTweetSlideOnClick = function() {
+  $('#new').on('click', (evt) => {
+    evt.preventDefault();
+    muteErrorMessage();
+    $(".new-tweet").slideToggle("slow");
   });
 }
 
@@ -88,5 +96,6 @@ const escapeScript = function (str) {
 $( document ).ready(function() {
   loadtweets();
   postNewTweetOnSubmit();
+  newTweetSlideOnClick();
 });
 
