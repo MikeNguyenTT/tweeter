@@ -3,6 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+// Create HTML element to be appended/ prepended 
 const createTweetElement  = function(tweetData) {
 
   const $tweet = `<article class="tweet">
@@ -28,6 +30,7 @@ const createTweetElement  = function(tweetData) {
   return $tweet;
 }
 
+// Helper to render a single tweet
 const renderTweets = function(tweetsArr) {
 
   tweetsArr.sort((a, b) => (b.created_at - a.created_at));
@@ -38,6 +41,7 @@ const renderTweets = function(tweetsArr) {
   }
 }
 
+// Load all tweets after document is ready
 const loadtweets = function() {
   $.get('/tweets')
   .then(function (tweetsArr) {
@@ -45,6 +49,7 @@ const loadtweets = function() {
   });
 }
 
+// POST a new tweet to the server, and get back Tweet object to be injected in the first position
 const postNewTweetOnSubmit = function() {
   const maxCounter = 140;
   $('#new-tweet').on('submit', (evt) => {
@@ -72,12 +77,14 @@ const postNewTweetOnSubmit = function() {
   });
 }
 
+// Show/hide New Tweet panel when user click on "Write a new tweet"
 const newTweetSlideOnClick = function() {
   $('#new').on('click', (evt) => {
     $(".new-tweet").slideToggle("slow");
   });
 }
 
+// scroll to top of screen and show New Tweet panel if 2nd button is clicked
 const scrollToTopOnClick = function() {
   $('#go-top').on('click', (evt) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -85,6 +92,7 @@ const scrollToTopOnClick = function() {
   });
 }
 
+// Window scroll event to display/hide 2nd button
 const onScrollWindowEvent = function() {
   $(document).on('scroll', (evt) => {
     if (isScrolledIntoView($("#header")[0])) {
@@ -96,6 +104,7 @@ const onScrollWindowEvent = function() {
   });
 }
 
+// check if the header is in or out of the Viewport to display 2nd button
 function isScrolledIntoView(el) {
   var rect = el.getBoundingClientRect();
   var elemTop = rect.top;
@@ -104,24 +113,31 @@ function isScrolledIntoView(el) {
   return isVisible;
 }
 
+// helper to show the error message
 const showErrorMessage = function(errorMessage) {
   $("#error-message").html(errorMessage);
   $("#error").slideDown("slow");
 }
 
+// helper to clear the error message
 const muteErrorMessage = function() {
   $("#error").slideUp()
   $("#error-message").html("");
 }
 
+// helper to prevent Cross Site Scripting
 const escapeScript = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+
 $( document ).ready(function() {
+  // load all the existing tweets to the page
   loadtweets();
+
+  //register event handlers
   postNewTweetOnSubmit();
   newTweetSlideOnClick();
   scrollToTopOnClick();
