@@ -1,0 +1,8 @@
+@use 'params';
+
+header {
+  @include params.vertical-align;
+  width: 100%;
+  background-image: url("../images/background.png");
+  background-color: params.$secondary-color;
+}

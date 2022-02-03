@@ -3,10 +3,11 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ @use 'params';
+
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,11 +15,13 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
+
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: params.$primary-font;
 }
 
 main {
@@ -31,10 +34,11 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-/* Tablet Styles */
+
+ /* Tablet Styles */
 @media all and (max-width: 1023px) {
   nav {
-    background-color: #618b31;
+    background-color: params.$secondary-color;
   }
 
   header {
@@ -46,6 +50,7 @@ main {
     height: 150px;
   }
 }
+
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   body {
@@ -54,7 +59,7 @@ main {
   }
 
   nav {
-    background-color: #4056A1;
+    background-color: params.$primary-color;
     position: fixed;
     z-index: 1;
   }
@@ -80,3 +85,5 @@ main {
     object-fit: contain;
   }
 }
+
+

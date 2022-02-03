@@ -1,5 +1,7 @@
+@use 'params';
+
 .new-tweet {
-  display: none;
+  display:none;
   flex-direction: column;
   align-items: stretch;
   width: 99%;
@@ -9,12 +11,12 @@
 .new-tweet #error {
   display: none;
   justify-content: flex-start;
-  color: red;
+  color: params.$expression-color;
   font-weight: bold;
   margin-bottom: 50px;
-  border: 3px solid red;
+  border: 3px solid params.$expression-color;
   padding: 2px 30px;
-  width: 100%;
+  width: 100%
 }
 
 .new-tweet-form {
@@ -22,7 +24,7 @@
   align-self: flex-start;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100%
 }
 
 .tweet-input {
@@ -31,7 +33,6 @@
   flex-direction: column;
   padding-bottom: 5px;
 }
-
 /* #tweet-label {
   align-self: flex-start;
 } */
@@ -51,25 +52,23 @@
   padding-top: 20px;
   padding-bottom: 100px;
 }
-
 #tweet-submit-button {
-  background-color: #4056A1;
-  font-family: "Bungee", sans-serif;
+  background-color: params.$primary-color;
+  font-family: params.$secondary-font;
   color: #FFFFFF;
 }
-
 .counter {
-  font-family: "Bungee", sans-serif;
+  font-family: params.$secondary-font;
   font-weight: 5px;
 }
 
 .red {
-  color: red;
+  color: params.$expression-color;
 }
 
 #go-top {
-  display: none;
-  background-color: red;
+  display:none;
+  background-color: params.$expression-color;
   color: white;
   border: none;
   padding: 30px;
@@ -79,9 +78,9 @@
   z-index: 1;
   right: 10px;
   bottom: 10px;
-}
+ }
 
-#go-top:hover {
+ #go-top:hover {
   box-shadow: 2px 2px #CEAEE5;
   color: black;
-}
+ }

@@ -1,0 +1,12 @@
+$primary-font: "Source Sans Pro", sans-serif;
+$secondary-font: 'Bungee', sans-serif;
+$primary-color: #4056A1;;
+$secondary-color: rgb(97, 139, 49);
+$expression-color: red;
+
+@mixin vertical-align() {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}

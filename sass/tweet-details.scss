@@ -1,3 +1,5 @@
+@use 'params';
+
 article.tweet {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@ article.tweet {
   margin: 50px auto;
   padding: 30px;
   flex-wrap: wrap;
-  word-break: break-all;
+  word-break:break-all
 }
 
 article.tweet .header {
@@ -15,13 +17,13 @@ article.tweet .header {
   align-items: center;
 }
 
-article.tweet .header .user .name {
+article.tweet .header .user .name{
   font-size: 30px;
   font-weight: bold;
   padding-left: 20px;
 }
 
-article.tweet .header .handle {
+article.tweet .header .handle{
   color: #CEAEE5;
   font-size: 30px;
   font-weight: bold;
@@ -42,15 +44,15 @@ article.tweet footer {
   padding-top: 20px;
 }
 
-article.tweet footer .time {
+article.tweet footer .time{
   font-size: 25px;
   font-weight: bold;
   padding-top: 10px;
   padding-left: 20px;
 }
 
-article.tweet footer .icons {
-  color: #4056A1;
+article.tweet footer .icons{
+  color: params.$primary-color;
 }
 
 article:hover {
