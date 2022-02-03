@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: stretch;
   width: 99%;
+  padding-top: 50px;
 }
 
 .new-tweet #error {

@@ -85,7 +85,7 @@ const scrollToTopOnClick = function() {
 
 const onScrollWindowEvent = function() {
   $(document).on('scroll', (evt) => {
-    if (isScrolledIntoView($("#new")[0])) {
+    if (isScrolledIntoView($("#header")[0])) {
       $("#go-top").hide();
     }
     else {
