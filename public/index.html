@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet-details.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -38,38 +38,38 @@
         <div id="double-down-icon"><i class="fa-solid fa-angles-down"></i></div>
       </span>
     </nav>
-    <header id="header">
-      <div><img src="/images/profile-hex.png"></div>
-      <div>
-          <h2>Amy Mansell</h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main id="tweets-container">
-      <section class="new-tweet">
-        <div id="error">
-          <i class="fas fa-exclamation-triangle"></i>&nbsp;
-          <span id="error-message"></span>&nbsp;
-          <i class="fas fa-exclamation-triangle"></i>
+    <section id="content">
+      <header id="header">
+        <div><img src="/images/profile-hex.png" id="user-image"></div>
+        <div>
+            <h2>Amy Mansell</h2>
         </div>
-        <div class="new-tweet-form">
-          <form id="new-tweet" method="POST" action="/tweets/">
-            <div class="tweet-input">
-              <!-- <label for="tweet-text" id="tweet-label"><strong>What are you humming about?</strong></label> -->
-              <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-            </div>
-            <div class="tweet-submit">
-              <button type="submit" id="tweet-submit-button">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
-            </div>
-          </form>
-        </div>
-      </section>
-      <section id="all-tweet">
-      </section>
-      <button id="go-top"><i class="fas fa-angle-double-up"></i></button>
-    </main>
-
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main id="tweets-container">
+        <section class="new-tweet">
+          <div id="error">
+            <i class="fas fa-exclamation-triangle"></i>&nbsp;
+            <span id="error-message"></span>&nbsp;
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <div class="new-tweet-form">
+            <form id="new-tweet" method="POST" action="/tweets/">
+              <div class="tweet-input">
+                <!-- <label for="tweet-text" id="tweet-label"><strong>What are you humming about?</strong></label> -->
+                <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+              </div>
+              <div class="tweet-submit">
+                <button type="submit" id="tweet-submit-button">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section id="all-tweet">
+        </section>
+        <button id="go-top"><i class="fas fa-angle-double-up"></i></button>
+      </main>
+    </section>  
   </body>
 </html>

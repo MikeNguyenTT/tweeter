@@ -63,3 +63,22 @@
 .red {
   color: red;
 }
+
+#go-top {
+  display:none;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 30px;
+  border-radius: 50%;
+  margin: 10px;
+  position: fixed;
+  z-index: 1;
+  right: 10px;
+  bottom: 10px;
+ }
+
+ #go-top:hover {
+  box-shadow: 2px 2px #CEAEE5;
+  color: black;
+ }

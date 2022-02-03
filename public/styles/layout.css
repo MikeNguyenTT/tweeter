@@ -15,6 +15,7 @@ html {
  */
 
 body {
+
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -32,23 +33,55 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- #go-top {
-  display:none;
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 30px;
-  border-radius: 50%;
-  margin: 10px;
-  position: fixed;
-  z-index: 1;
-  right: 10px;
-  bottom: 10px;
- }
+ /* Tablet Styles */
+@media all and (max-width: 1023px) {
+  nav {
+    background-color: rgb(97, 139, 49);
+  }
 
- #go-top:hover {
-  box-shadow: 2px 2px #CEAEE5;
-  color: black;
- }
+  header {
+    height: 250px;
+  }
+
+  header #user-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav {
+    background-color: #4056A1;
+    position: fixed;
+    z-index: 1;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 200px;
+  }
+
+  header {
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 80rem;
+    height: 25rem;
+  }
+
+  header #user-image {
+    align-self: center;
+    margin: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+}
 
 
