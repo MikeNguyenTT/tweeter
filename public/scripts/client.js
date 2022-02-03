@@ -46,6 +46,7 @@ const loadtweets = function() {
 }
 
 const postNewTweetOnSubmit = function() {
+  const maxCounter = 140;
   $('#new-tweet').on('submit', (evt) => {
     evt.preventDefault();
     muteErrorMessage();
@@ -56,7 +57,7 @@ const postNewTweetOnSubmit = function() {
       return;
     };
 
-    if (tweetText.length > 140) {
+    if (tweetText.length > maxCounter) {
       showErrorMessage("Too long. Please respect our arbitrary limit of 140b chars!");
       return;
     };
@@ -65,6 +66,7 @@ const postNewTweetOnSubmit = function() {
     $.post('/tweets', param).then((responseTweet) => {
       muteErrorMessage();
       $("#tweet-text").val("");
+      $("[name='counter']").html(maxCounter);
       $('#all-tweet').prepend(createTweetElement(responseTweet));
     });
   });
