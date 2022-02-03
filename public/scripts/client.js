@@ -64,6 +64,7 @@ const postNewTweetOnSubmit = function() {
     const param = $('#new-tweet').serialize();
     $.post('/tweets', param).then((responseTweet) => {
       muteErrorMessage();
+      $("#tweet-text").val("");
       $('#all-tweet').prepend(createTweetElement(responseTweet));
     });
   });
@@ -72,9 +73,35 @@ const postNewTweetOnSubmit = function() {
 const newTweetSlideOnClick = function() {
   $('#new').on('click', (evt) => {
     evt.preventDefault();
-    muteErrorMessage();
     $(".new-tweet").slideToggle("slow");
   });
+}
+
+const scrollToTopOnClick = function() {
+  $('#go-top').on('click', (evt) => {
+    evt.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    $(".new-tweet").slideDown("slow");
+  });
+}
+
+const onScrollWindowEvent = function() {
+  $(document).on('scroll', (evt) => {
+    if (isScrolledIntoView($("#new")[0])) {
+      $("#go-top").hide();
+    }
+    else {
+      $("#go-top").show();
+    }
+  });
+}
+
+function isScrolledIntoView(el) {
+  var rect = el.getBoundingClientRect();
+  var elemTop = rect.top;
+  var elemBottom = rect.bottom;
+  var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  return isVisible;
 }
 
 const showErrorMessage = function(errorMessage) {
@@ -97,5 +124,9 @@ $( document ).ready(function() {
   loadtweets();
   postNewTweetOnSubmit();
   newTweetSlideOnClick();
+  scrollToTopOnClick();
+  onScrollWindowEvent();
+  
 });
+
 
