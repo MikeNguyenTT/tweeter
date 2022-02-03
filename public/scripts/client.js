@@ -72,14 +72,12 @@ const postNewTweetOnSubmit = function() {
 
 const newTweetSlideOnClick = function() {
   $('#new').on('click', (evt) => {
-    evt.preventDefault();
     $(".new-tweet").slideToggle("slow");
   });
 }
 
 const scrollToTopOnClick = function() {
   $('#go-top').on('click', (evt) => {
-    evt.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
     $(".new-tweet").slideDown("slow");
   });
