@@ -20,3 +20,8 @@ jQuery and CSS flexbox is extensively used to handle front-end processing and st
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+!["Screenshot of tweet compose box in desktop UI"](https://github.com/MikeNguyenTT/tweeter/blob/master/docs/tweet-box.png)
+!["Screenshot of tablet UI using responsive design"](https://github.com/MikeNguyenTT/tweeter/blob/master/docs/tablet-responsive-design.png)
+!["A floating button to scroll to top and sliding New Tweet box"](https://github.com/MikeNguyenTT/tweeter/blob/master/docs/floating-button.png)
