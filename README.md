@@ -1,6 +1,6 @@
 # Tweeter Project
 
-A simple, single-page Twitter clone that use
+A simple, single-page application that use jQuery and AJAX to clone Twitter in a responsive design approach
 
 ## Setup
 
