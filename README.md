@@ -29,16 +29,16 @@ The app will be served at <http://localhost:8080/>.
 
 #### !["New tweet will be displayed on top with AJAX"]
 
-(https://github.com/MikeNguyenTT/tweeter/blob/master/docs/new-tweet.gif?raw=true)
+![New tweet will be displayed on top with AJAX](https://github.com/MikeNguyenTT/tweeter/blob/master/docs/new-tweet.gif?raw=true)
 
 #### !["A quick button in red to go to top and open New Tweet box"]
 
-(https://github.com/MikeNguyenTT/tweeter/blob/master/docs/shortcut-button.gif?raw=true)
+![A quick button in red to go to top and open New Tweet box](https://github.com/MikeNguyenTT/tweeter/blob/master/docs/shortcut-button.gif?raw=true)
 
 #### !["Responsive design to change screen according to screen size for PCs or handhelds"]
 
-(https://github.com/MikeNguyenTT/tweeter/blob/master/docs/responsive-design.gif?raw=true)
+![Responsive design to change screen according to screen size for PCs or handhelds](https://github.com/MikeNguyenTT/tweeter/blob/master/docs/responsive-design.gif?raw=true)
 
 #### !["New Tweet box is opened on top"]
 
-(https://github.com/MikeNguyenTT/tweeter/blob/master/docs/open-new-tweet-box.gif?raw=true)
+![New Tweet box is opened on top](https://github.com/MikeNguyenTT/tweeter/blob/master/docs/open-new-tweet-box.gif?raw=true)
