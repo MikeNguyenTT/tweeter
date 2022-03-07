@@ -7,7 +7,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -19,12 +21,14 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
+  background-image: url("../images/background.png");
 }
 
 main {
   margin-left: 5%;
   margin-right: 5%;
   background-color: #f4f1ec;
+  background-image: url("../images/background.png");
   text-align: center;
 }
 
@@ -54,7 +58,7 @@ main {
   }
 
   nav {
-    background-color: #4056A1;
+    background-color: #4056a1;
     position: fixed;
     z-index: 1;
   }

@@ -22,7 +22,7 @@ article.tweet .header .user .name {
 }
 
 article.tweet .header .handle {
-  color: #CEAEE5;
+  color: #ceaee5;
   font-size: 30px;
   font-weight: bold;
 }
@@ -50,13 +50,15 @@ article.tweet footer .time {
 }
 
 article.tweet footer .icons {
-  color: #4056A1;
+  color: #4056a1;
 }
 
 article:hover {
-  box-shadow: 10px 10px #CEAEE5;
+  box-shadow: 10px 10px rgb(163, 160, 160);
 }
 
-.fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
+.fa-flag:hover,
+.fa-retweet:hover,
+.fa-heart:hover {
   color: orange;
 }
