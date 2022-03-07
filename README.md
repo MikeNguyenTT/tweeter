@@ -27,6 +27,18 @@ The app will be served at <http://localhost:8080/>.
 
 ## Screenshots
 
-!["Screenshot of tweet compose box in desktop UI"](https://github.com/MikeNguyenTT/tweeter/blob/master/docs/tweet-box.png)
-!["Screenshot of tablet UI using responsive design"](https://github.com/MikeNguyenTT/tweeter/blob/master/docs/tablet-responsive-design.png)
-!["A floating button to scroll to top and sliding New Tweet box"](https://github.com/MikeNguyenTT/tweeter/blob/master/docs/floating-button.png)
+#### !["New tweet will be displayed on top with AJAX"]
+
+(https://github.com/MikeNguyenTT/tweeter/blob/master/docs/new-tweet.gif?raw=true)
+
+#### !["A quick button in red to go to top and open New Tweet box"]
+
+(https://github.com/MikeNguyenTT/tweeter/blob/master/docs/shortcut-button.gif?raw=true)
+
+#### !["Responsive design to change screen according to screen size for PCs or handhelds"]
+
+(https://github.com/MikeNguyenTT/tweeter/blob/master/docs/responsive-design.gif?raw=true)
+
+#### !["New Tweet box is opened on top"]
+
+(https://github.com/MikeNguyenTT/tweeter/blob/master/docs/open-new-tweet-box.gif?raw=true)
